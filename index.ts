@@ -1,6 +1,7 @@
 import express, { Express } from "express";
 import dotenv from "dotenv";
 import path from "path";
+import mainRoutes from "./routers/mainRouters";
 
 dotenv.config();
 
@@ -14,11 +15,8 @@ app.set("views", path.join(__dirname, "views"));
 
 app.set("port", process.env.PORT ?? 3000);
 
-app.get("/", (req, res) => {
-    res.render("index", {
-        title: "Snoeiwerken Gorremans | Home"
-    })
-});
+
+app.use("/", mainRoutes);
 
 app.listen(app.get("port"), () => {
     console.log("Server started on http://localhost:" + app.get("port"));
