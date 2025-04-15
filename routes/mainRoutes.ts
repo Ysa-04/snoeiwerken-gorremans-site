@@ -10,15 +10,18 @@ router.get("/contact", (req, res) => {
 });
 router.get("/snoeien-en-vellen", (req,res) => {
   res.render('snoeien-en-vellen');
-})
+});
 router.get("/klimwerk-bomen", (req,res) => {
   res.render('klimwerk-bomen');
-})
+});
 router.get("/verhakselen", (req,res) => {
   res.render('verhakselen');
-})
+});
 router.get("/klieven-brandhout", (req,res) => {
   res.render('klieven-brandhout');
-})
+});
+router.get("/klepelmaaien", (req,res) => {
+  res.render('klepelmaaien');
+});
 
 export default router;
