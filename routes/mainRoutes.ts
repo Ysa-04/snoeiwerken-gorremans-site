@@ -11,8 +11,10 @@ router.get("/contact", (req, res) => {
 router.get("/snoeien-en-vellen", (req,res) => {
   res.render('snoeien-en-vellen');
 })
+router.get("/klimwerk-bomen", (req,res) => {
+  res.render('klimwerk-bomen');
+})
 
 
-// meerdere routers invoegen hieronder zoals router.get hierboven
 
 export default router;
