@@ -20,4 +20,29 @@ function showSlides() {
   setTimeout(showSlides, 4000);
 }
 
-document.addEventListener("DOMContentLoaded", showSlides);
+document.addEventListener("DOMContentLoaded", () => {
+  showSlides();
+
+  // === Scroll naar boven pijltje ===
+  const backToTop = document.getElementById("backToTop");
+
+  // Optioneel: enkel tonen als je naar beneden scrollt
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTop.style.opacity = "1";
+      backToTop.style.pointerEvents = "auto";
+    } else {
+      backToTop.style.opacity = "0";
+      backToTop.style.pointerEvents = "none";
+    }
+  });
+
+  // Klik op pijltje: smooth scroll naar boven
+  backToTop.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+});
