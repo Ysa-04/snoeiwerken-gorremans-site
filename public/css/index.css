@@ -1,7 +1,3 @@
-html {
-    scroll-behavior: smooth;
-}
-
 /* Main content */
 main {
     padding: 2rem 1rem;
@@ -13,7 +9,7 @@ main {
 
 main h1 {
     font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     color: #2e7d32;
 }
 
@@ -36,6 +32,7 @@ main button:hover {
 .bi-facebook {
     color: #1877f2;
     margin-top: 1rem;
+    vertical-align: middle; /* Zorgt ervoor dat het icoon op dezelfde hoogte staat als de knop */
 }
 
 /* Nieuwe layout voor de content onder de slideshow */
@@ -66,56 +63,67 @@ main button:hover {
     max-width: 700px;
 }
 
+/* Ruimte tussen de tekst in de 'about' sectie */
 .about article {
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; /* Zorgt voor ruimte tussen de artikelen */
 }
 
+/* Specifieke marge voor koppen en paragrafen in de 'about' sectie */
 .about h1, .about h2, .about h3, .about p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; /* Ruimte onder elke kop of paragraaf */
 }
 
+/* Extra ruimte boven de paragrafen */
 .about p {
-    padding-top: 1rem;
+    padding-top: 1rem; /* Zet wat ruimte bovenaan elke paragraaf */
 }
 
+/* Vergroot de marge onder de vorige paragraaf (voor de tweede h3) */
 .about p:last-of-type {
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; /* Vergroot de ruimte onder de laatste paragraaf */
 }
 
+/* Verminder de marge boven de tweede h3 en de bijbehorende paragraaf */
 .about h3 + p {
-    margin-top: 0.5rem;
+    margin-top: 0.5rem; /* Verminder de ruimte tussen h3 en de paragraaf eronder */
 }
 
+/* Verminder de marge onder de tweede h3 */
 .about h3 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem; /* Ruimte onder de h3 verkleinen */
 }
 
 /* Sectie onderaan met de afspraak */
 main > section:last-of-type {
-    margin-top: 4rem;
+    margin-top: 4rem; /* Verhoog de marge tussen de profielinformatie en de afspraak */
     max-width: 1000px;
     text-align: center;
 }
 
-/* Afspraak sectie */
+/* Nieuwe styling voor het 'Maak meteen een afspraak' artikel */
 .make-appointment {
-    background-color: #f5f5f5;
-    padding: 1.5rem;
+    background-color: #f5f5f5; /* Achtergrondkleur voor het nieuwe artikel */
+    padding: 3rem; /* Vergroot de padding voor meer ruimte */
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-top: 4rem;
+    margin-top: 4rem; /* Extra ruimte boven de box */
     text-align: center;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 90%; /* Vergroot de breedte naar 90% */
+    max-width: 1200px; /* Maximaliseer de breedte tot 1200px */
+    margin: 0 auto; /* Centreert de box horizontaal */
+}
+
+.make-appointment button {
+    margin-bottom: 2rem; /* Voeg ruimte toe onder de knop "Contacteer ons" */
 }
 
 .make-appointment h3 {
     font-size: 2.5rem;
-    color: #2e7d32;
+    color: #2e7d32; /* Groene kleur voor de kop */
     margin-bottom: 1rem;
 }
 
+/* Stijl voor de tekst in de afspraak sectie */
 .make-appointment p {
     font-size: 1.125rem;
     color: #333;
@@ -123,13 +131,73 @@ main > section:last-of-type {
     margin-bottom: 1.5rem;
 }
 
-/* Slideshow */
+/* Nieuwe layout voor de contact icons naast elkaar met gecentreerde en gelijke hoogte */
+.make-appointment .contact-icons {
+    display: flex;
+    align-items: center; /* Zorg ervoor dat alles op dezelfde hoogte staat */
+    justify-content: center; /* Centreer de items horizontaal */
+    gap: 1.5rem; /* Verhoog de ruimte tussen de iconen en de knop */
+    margin-top: 2rem; /* Ruimte boven de iconen */
+}
+
+.make-appointment .contact-icons a {
+    text-decoration: none; /* Verwijder de onderstreping van de link */
+}
+
+.make-appointment .contact-icons button {
+    font-size: 1rem; /* Zorg ervoor dat de knop goed leesbaar is */
+    padding: 0.75rem 2rem; /* Voeg padding toe voor de knop */
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.make-appointment .contact-icons button:hover {
+    background-color: #1b5e20;
+}
+
+.make-appointment .contact-icons i {
+    color: #1877f2; /* Facebook blauwe kleur */
+    font-size: 2rem; /* Vergroot de Facebook-icoon */
+}
+
+/* Verklein de padding op kleinere schermen */
+@media (max-width: 768px) {
+    .make-appointment {
+        padding: 2rem;
+        width: 90%; /* Zorgt ervoor dat de box op kleinere schermen breder wordt */
+    }
+
+    .make-appointment h3 {
+        font-size: 2rem;
+    }
+
+    .make-appointment p {
+        font-size: 1rem;
+    }
+
+    .make-appointment .contact-icons {
+        gap: 1rem; /* Verklein de ruimte tussen de iconen op kleinere schermen */
+    }
+
+    .make-appointment .contact-icons button {
+        font-size: 1rem; /* Kleinere tekst op kleinere schermen */
+    }
+
+    .make-appointment .contact-icons i {
+        font-size: 1.5rem; /* Verklein de icoon op kleinere schermen */
+    }
+}
+
 .slideshow-container {
     position: relative;
     width: 60%;
     max-width: 1000px;
     height: 500px;
-    margin: 1rem auto;
+    margin: 2rem auto;
     overflow: hidden;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -171,7 +239,7 @@ main img {
     max-width: 80%;
 }
 
-/* Back to Top knop */
+/* Scroll naar boven pijltje */
 #backToTop {
     position: fixed;
     bottom: 2rem;
@@ -181,49 +249,11 @@ main img {
     z-index: 1000;
     cursor: pointer;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0; /* start opzichtbaar */
+    pointer-events: none; /* klikbaar pas na scroll */
 }
 
 #backToTop:hover {
     transform: scale(1.2);
     color: #1b5e20;
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-    .make-appointment {
-        padding: 1rem;
-        width: 90%;
-    }
-
-    .make-appointment h3 {
-        font-size: 2rem;
-    }
-
-    .make-appointment p {
-        font-size: 1rem;
-    }
-
-    .text {
-        font-size: 1rem;
-        padding: 0.75rem 1rem;
-        left: 1rem;
-        bottom: 1rem;
-    }
-
-    main h1 {
-        font-size: 2rem;
-    }
-
-    .slideshow-container {
-        width: 90%;
-    }
-
-    .profile-about-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about {
-        text-align: center;
-    }
 }
