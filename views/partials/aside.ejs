@@ -1,25 +1,27 @@
-<nav>
-    <ul>
-        <li>
-            <a href="/snoeien-en-vellen">Snoeien en vellen van bomen</a>
-        </li>
-        <li>
-            <a href="/klimwerk-bomen">Klimwerk Bomen</a>
-        </li>
-        <li>
-            <a href="/verhakselen">Verhakselen van takken en snoeihout</a>
-        </li>
-        <li>
-            <a href="/klieven-brandhout">Klieven van brandhout</a>
-        </li>
-        <li>
-            <a href="/klepelmaaien">Klepelmaaien</a>
-        </li>
-        <li>
-            <a href="/frezen-boomstronken">Frezen van boomstronken</a>
-        </li>
-        <li>
-            <a href="/stormschade">Opruimen van stormschade</a>
-        </li>
-    </ul>
-</nav>
+<aside id="menu">
+    </div>
+    <!-- Sluit knop -->
+    <button id="closeMenuButton" class="close-menu">✖</button>
+    <nav>
+        <ul>
+            <li><a href="/snoeien-en-vellen">Snoeien en vellen van bomen</a></li>
+            <li><a href="/klimwerk-bomen">Klimwerk Bomen</a></li>
+            <li><a href="/verhakselen">Verhakselen van takken en snoeihout</a></li>
+            <li><a href="/klieven-brandhout">Klieven van brandhout</a></li>
+            <li><a href="/klepelmaaien">Klepelmaaien</a></li>
+            <li><a href="/frezen-boomstronken">Frezen van boomstronken</a></li>
+            <li><a href="/stormschade">Opruimen van stormschade</a></li>
+        </ul>
+    </nav>
+</aside>
+<script>
+    document.getElementById("menuButton").addEventListener("click", function() {
+        var menu = document.getElementById("menu");
+        menu.classList.toggle("open");
+    });
+
+    document.getElementById("closeMenuButton").addEventListener("click", function() {
+    var menu = document.getElementById("menu");
+    menu.classList.remove("open"); // Verwijder de 'open' klasse om het menu te sluiten
+    });
+</script>

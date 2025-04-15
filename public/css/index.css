@@ -36,23 +36,33 @@ button:hover {
     margin-top: 0.5rem;
 }
 
-/* Scroll naar boven pijltje */
 #backToTop {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
     font-size: 2.5rem;
-    color: #2e7d32;
+    color: #2e7d32; /* Standaard groene kleur voor het pijltje */
     z-index: 1000;
     cursor: pointer;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    opacity: 0; /* start opzichtbaar */
+    opacity: 0; /* start onzichtbaar */
     pointer-events: none; /* klikbaar pas na scroll */
 }
 
 #backToTop:hover {
     transform: scale(1.2);
-    color: #1b5e20;
+    color: #1b5e20; /* Hover kleur van het pijltje */
+}
+
+/* Als het menu open is, verander de kleur naar wit */
+#menu.open ~ #backToTop i {
+    color: white; /* Verander de kleur naar wit wanneer het menu open is */
+}
+
+#menu.open ~ #backToTop {
+    display: block; /* Maak de back-to-top knop zichtbaar wanneer het menu open is */
+    opacity: 1; /* Zorg ervoor dat de knop zichtbaar is */
+    pointer-events: auto; /* Zorg ervoor dat de knop weer klikbaar is */
 }
 
 /* ============ Layout profiel & about ============ */
