@@ -26,5 +26,7 @@ router.get("/klepelmaaien", (req,res) => {
 router.get("/frezen-boomstronken", (req,res) => {
   res.render('frezen-boomstronken');
 });
-
+router.get("/stormschade", (req,res) => {
+  res.render('stormschade');
+});
 export default router;
