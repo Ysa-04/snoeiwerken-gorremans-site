@@ -73,24 +73,21 @@
     background-color: #2e7d32;
   }
   
-  /* Optioneel: dezelfde stijl voor het hamburger menu (indien zichtbaar op deze pagina) */
-  #menuButton {
-    font-size: 30px;
-    color: #07480b; /* donkergroen in plaats van wit */
-    background: none;
+ /* ============ Buttons ============ */
+button {
+    padding: 0.75rem 2rem;
+    background-color: #2e7d32;
+    color: white;
     border: none;
+    border-radius: 8px;
+    font-size: 1rem;
     cursor: pointer;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    z-index: 10;
-    transition: transform 0.2s ease;
-  }
-  
-  #menuButton:hover {
-    transform: scale(1.1);
-    color: #2e7d32;
-  }
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1b5e20;
+}
   
   @media (max-width: 768px) {
     .contact-container {
