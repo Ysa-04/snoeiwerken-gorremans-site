@@ -1,0 +1,27 @@
+<footer>
+    <div class="footer-contact">
+      <h3>Contacteer ons</h3>
+      <p>
+        Dennenlaan 51<br />
+        2560 Nijlen
+        Antwerpen - België<br /><br />
+        Gsm: <a href="tel:+32479671595">0479 67 15 95</a><br />
+        <a href="mailto:davegorremans@hotmail.be">davegorremans@hotmail.be</a><br />
+        BTW BE0689947439
+      </p>
+    </div>
+    <div id="map"></div>
+    <script>
+      var map = L.map("map").setView(
+        [51.167116612301605, 4.6995247256329815],
+        16
+      );
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution:
+          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      }).addTo(map);
+      var marker = L.marker([51.167116612301605, 4.6995247256329815]).addTo(map);
+    </script>
+  </footer>
+  
