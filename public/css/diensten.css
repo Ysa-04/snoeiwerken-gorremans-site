@@ -1,0 +1,144 @@
+/* ============ Buttons ============ */
+button {
+    padding: 0.75rem 2rem;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+button:hover {
+    background-color: #1b5e20;
+}
+  
+/* ============ Main Layout ============ */
+main {
+    padding: 2rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #1e1e1e;
+    font-family: 'Roboto', sans-serif;
+}
+  
+main h1 {
+    font-size: 2.5rem;
+    color: #07480b;
+    margin-bottom: 1rem;
+}
+  
+main h2 {
+    font-size: 1.75rem;
+    color: #2e7d32;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+  
+main p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+  
+/* ========== GALLERY ========== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+  
+.gallery img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+  
+.gallery img:hover {
+    transform: scale(1.05);
+}
+  
+/* ========== IMAGE MODAL ========== */
+#imageModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+  
+#imageModal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+/* ============ Social Icons ============ */
+.bi-facebook {
+    color: #1877f2;
+    font-size: 3rem;
+    margin-top: 0.5rem;
+}
+
+/* ============ Contact & Facebook Knoppen ============ */
+section {
+    display: flex;
+    gap: 1rem; /* Voeg ruimte toe tussen de knoppen */
+    align-items: center; /* Zorg ervoor dat de knoppen verticaal uitgelijnd zijn */
+    margin-top: 2rem; /* Voeg wat ruimte toe boven de knoppen */
+}
+
+section a {
+    text-decoration: none; /* Verwijder de onderstreping van de links */
+}
+
+/* ============ Back to Top Button ============ */
+#backToTop {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: 2.5rem;
+    color: #2e7d32;
+    z-index: 1000;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#backToTop:hover {
+    transform: scale(1.2);
+    color: #1b5e20;
+}
+
+/* Als menu open is, verander kleur van het pijltje naar wit */
+#backToTop.menu-open i {
+    color: white;
+}
+
+  
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+    main {
+        padding: 1.5rem 1rem;
+    }
+  
+    main h1 {
+        font-size: 2rem;
+    }
+  
+    main h2 {
+        font-size: 1.5rem;
+    }
+}
