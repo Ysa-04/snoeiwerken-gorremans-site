@@ -1,4 +1,4 @@
-/* Algemeen styling */
+/* ============ Global Styles ============ */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -15,7 +15,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Header Styling */
+/* ============ Header Styles ============ */
 header {
   background-color: white;
   padding: 1rem;
@@ -58,7 +58,7 @@ header nav a:hover {
   color: #2e7d32;
 }
 
-/* Hamburger Menu Styling */
+/* ============ Hamburger Menu ============ */
 #menuButton {
   font-size: 30px;
   color: white;
@@ -70,7 +70,7 @@ header nav a:hover {
   z-index: 10;
 }
 
-/* Sidebar Menu (Aside) */
+/* ============ Sidebar Menu ============ */
 #menu {
   position: fixed;
   top: 0;
@@ -90,7 +90,7 @@ header nav a:hover {
 
 #menu nav ul li {
   padding: 15px;
-  text-align: left; /* Zorg ervoor dat de tekst links uitgelijnd is */
+  text-align: left;
 }
 
 #menu nav ul li a {
@@ -98,15 +98,15 @@ header nav a:hover {
   text-decoration: none;
   font-size: 18px;
   display: block;
-  padding: 10px 15px; /* Voeg extra ruimte toe rondom de links voor een betere klikbaarheid */
+  padding: 10px 15px;
 }
 
-/* Open Menu Styles */
+/* ============ Open Menu ============ */
 #menu.open {
   right: 0;
 }
 
-/* Close Menu Button */
+/* ============ Close Menu Button ============ */
 #closeMenuButton {
   font-size: 40px;
   color: white;
@@ -117,14 +117,14 @@ header nav a:hover {
   right: 0.5rem;
   cursor: pointer;
   z-index: 20;
-  margin-right: 1rem; /* Voeg wat ruimte toe tussen het kruisje en de menu-inhoud */
+  margin-right: 1rem;
 }
 
 #closeMenuButton:hover {
   color: #ff4d4d;
 }
 
-/* Footer Styling */
+/* ============ Footer Styles ============ */
 footer {
   background-color: #2e7d32;
   color: #ffffff;
@@ -167,9 +167,8 @@ footer {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Styles */
+/* ============ Responsive Styles ============ */
 @media (max-width: 768px) {
-  /* Header adjustments for small screens */
   header {
     flex-direction: column;
     align-items: center;
@@ -187,7 +186,6 @@ footer {
     height: 250px;
   }
 
-  /* Navigation adjustments for small screens */
   header nav ul {
     flex-direction: column;
     gap: 1rem;

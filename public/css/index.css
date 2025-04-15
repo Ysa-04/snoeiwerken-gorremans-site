@@ -1,4 +1,4 @@
-/* ============ Global ============ */
+/* ============ Global Styles ============ */
 main {
     padding: 2rem 1rem;
     display: flex;
@@ -13,7 +13,7 @@ main h1 {
     color: #2e7d32;
 }
 
-/* ============ Knoppen ============ */
+/* ============ Buttons ============ */
 button {
     padding: 0.75rem 2rem;
     background-color: #2e7d32;
@@ -29,43 +29,44 @@ button:hover {
     background-color: #1b5e20;
 }
 
-/* Facebook icon */
+/* ============ Social Icons ============ */
 .bi-facebook {
     color: #1877f2;
     font-size: 3rem;
     margin-top: 0.5rem;
 }
 
+/* ============ Back to Top Button ============ */
 #backToTop {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
     font-size: 2.5rem;
-    color: #2e7d32; /* Standaard groene kleur voor het pijltje */
+    color: #2e7d32; /* Standard green color for the arrow */
     z-index: 1000;
     cursor: pointer;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    opacity: 0; /* start onzichtbaar */
-    pointer-events: none; /* klikbaar pas na scroll */
+    opacity: 0; /* initially invisible */
+    pointer-events: none; /* clickable after scroll */
 }
 
 #backToTop:hover {
     transform: scale(1.2);
-    color: #1b5e20; /* Hover kleur van het pijltje */
+    color: #1b5e20; /* Hover color for the arrow */
 }
 
-/* Als het menu open is, verander de kleur naar wit */
+/* When the menu is open, change the color to white */
 #menu.open ~ #backToTop i {
-    color: white; /* Verander de kleur naar wit wanneer het menu open is */
+    color: white; /* Change color to white when the menu is open */
 }
 
 #menu.open ~ #backToTop {
-    display: block; /* Maak de back-to-top knop zichtbaar wanneer het menu open is */
-    opacity: 1; /* Zorg ervoor dat de knop zichtbaar is */
-    pointer-events: auto; /* Zorg ervoor dat de knop weer klikbaar is */
+    display: block; /* Make the back-to-top button visible when menu is open */
+    opacity: 1; /* Make the button visible */
+    pointer-events: auto; /* Make the button clickable */
 }
 
-/* ============ Layout profiel & about ============ */
+/* ============ Profile & About Layout ============ */
 .profile-about-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -95,10 +96,7 @@ button:hover {
     margin-bottom: 2rem;
 }
 
-.about h1,
-.about h2,
-.about h3,
-.about p {
+.about h1, .about h2, .about h3, .about p {
     margin-bottom: 1.5rem;
 }
 
@@ -166,7 +164,7 @@ main img {
     max-width: 80%;
 }
 
-/* ============ Afspraak sectie ============ */
+/* ============ Appointment Section ============ */
 main > section:last-of-type {
     margin-top: 4rem;
     max-width: 1000px;
@@ -206,7 +204,7 @@ main > section:last-of-type {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    margin-top: 0.75rem; /* AANGEPAST: minder ruimte tussen knop en Facebook-icoon */
+    margin-top: 0.75rem; /* Adjusted: less space between button and Facebook icon */
 }
 
 .make-appointment .contact-icons a {
@@ -218,7 +216,7 @@ main > section:last-of-type {
     color: #1877f2;
 }
 
-/* ============ Responsiveness ============ */
+/* ============ Responsive Styles ============ */
 @media (max-width: 768px) {
     .make-appointment {
         padding: 2rem;
