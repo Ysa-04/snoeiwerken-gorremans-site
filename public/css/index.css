@@ -1,7 +1,5 @@
-
-  
-  /* Main content */
-  main {
+/* Main content */
+main {
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
@@ -53,31 +51,42 @@
       width: 90%;
     }
   }
-
-.slideshow-container {
+  
+  .slideshow-container {
     position: relative;
     width: 60%;
     max-width: 1000px;
+    height: 500px;
     margin: 2rem auto;
     overflow: hidden;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.mySlides {
-    display: none;
-    position: relative;
-}
-
-main img {
+  }
+  
+  .mySlides {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 0;
+  }
+  
+  .mySlides.active {
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  main img {
+    width: 100%;
+    height: 100%;
     border-radius: 16px;
     object-fit: cover;
-    max-height: 500px;
-}
-
-.text {
+  }
+  
+  .text {
     position: absolute;
     bottom: 2rem;
     left: 2rem;
@@ -88,17 +97,5 @@ main img {
     padding: 1rem 1.5rem;
     border-radius: 12px;
     max-width: 80%;
-}
-
-/* Fade animatie */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes fade {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
-}
+  }
+  
