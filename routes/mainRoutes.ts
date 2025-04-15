@@ -14,7 +14,9 @@ router.get("/snoeien-en-vellen", (req,res) => {
 router.get("/klimwerk-bomen", (req,res) => {
   res.render('klimwerk-bomen');
 })
-
+router.get("/verhakselen", (req,res) => {
+  res.render('verhakselen');
+})
 
 
 export default router;

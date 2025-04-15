@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const backToTop = document.getElementById("backToTop");
-    const menu = document.getElementById("menu"); // Zorg dat dit element bestaat!
+    const menu = document.getElementById("menu"); 
   
     window.addEventListener("scroll", () => {
       if (window.scrollY > 300) {
@@ -19,8 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         behavior: "smooth"
       });
     });
-  
-    // Menu open check + toggle class op backToTop
+
     const observer = new MutationObserver(() => {
       if (menu.classList.contains("open")) {
         backToTop.classList.add("menu-open");
