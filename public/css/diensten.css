@@ -65,7 +65,17 @@ main p {
 .gallery img:hover {
     transform: scale(1.05);
 }
+
+/* ========== Frezen image ========= */
+.frezen-img {
+    display: block;
+    margin: 2rem auto; /* centreert horizontaal en geeft ruimte erboven en eronder */
+    max-width: 500px;  /* pas dit aan voor gewenste grootte */
+    width: 100%;       /* zorgt dat hij responsief blijft */
+    height: auto;
+  }
   
+
 /* ========== IMAGE MODAL ========== */
 #imageModal {
     position: fixed;

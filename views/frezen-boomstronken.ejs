@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Snoeiwerken Gorremans | Snoeien en vellen van bomen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="css/reset.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/diensten.css"/>
+  <script src="/js/diensten.js"></script>
+</head>
+<body>
+  <%- include('partials/header') %>
+  <%- include('partials/aside') %>
+
+  <main>
+    <h1>Frezen van boomstronken</h1>
+    <p>Stoort u zich aan de boomwortels of stronken die zijn overgebleven na het omhakken van een boom? Geen probleem voor Snoeiwerken Gorremans. Hij komt graag bij u langs voor het frezen van boomstronken in Nijlen en omgeving.</p>
+
+    <h2>Meer ruimte in uw tuin</h2>
+    <p>Bij het verwijderen van een boom blijft er steeds een stuk boomstronk achter in de bodem. Met hulp van een stronkenfrees worden deze wortels tot houtschilfers gemalen en vermengd met de grond. Op die manier kan de (boom)stronk niet meer uitlopen en heeft u opnieuw meer ruimte in uw tuin.</p>
+    <p>Dit uitfrezen en opruimen van boomstronken en boomwortels gebeurt op een snelle en veilige manier. Alle afval wordt bovendien meteen meegenomen, zodat u zich daarover ook geen zorgen hoeft te maken.</p>
+
+    <h2>Vraag een vrijblijvende offerte aan</h2>
+    <p>Nog bepaalde vragen over het frezen van boomstronken of het bomen snoeien door Snoeiwerken Gorremans uit Nijlen? Neem dan gerust contact op. U krijgt een gedetailleerd antwoord en indien gewenst een gratis en vrijblijvende offerte.</p>
+      <section>
+        <a href="/contact"><button>Contacteer ons</button></a>
+        <a href="https://www.facebook.com/profile.php?id=100057395951596&sk=photos&locale=nl_NL" target="_blank" class="facebook-icon" aria-label="Facebook">
+          <i class="bi bi-facebook"></i>
+        </a>
+      </section>
+   <img src="/assets/frezen1.jpg" alt="Frezen" class="frezen-img">
+  </main>
+
+  <%- include('partials/footer') %>
+
+  <script>
+    function openModal(src) {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImg');
+      modal.style.display = 'flex';
+      modalImg.src = src;
+    }
+  </script>
+</body>
+</html>

@@ -23,5 +23,8 @@ router.get("/klieven-brandhout", (req,res) => {
 router.get("/klepelmaaien", (req,res) => {
   res.render('klepelmaaien');
 });
+router.get("/frezen-boomstronken", (req,res) => {
+  res.render('frezen-boomstronken');
+});
 
 export default router;
