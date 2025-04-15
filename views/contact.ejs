@@ -31,23 +31,23 @@
         </section>
       
         <section class="contact-form-section">
-          <form action="mmailto:davegorremans@hotmail.be" method="post" enctype="text/plain" class="contact-form">
-            <label for="name">Naam *</label>
-            <input type="text" id="name" name="Naam" required>
-      
-            <label for="address">Adres</label>
-            <input type="text" id="address" name="Adres">
-      
-            <label for="email">E-mailadres *</label>
-            <input type="email" id="email" name="E-mail" required>
-      
-            <label for="phone">Telefoonnummer *</label>
-            <input type="tel" id="phone" name="Telefoonnummer" required>
-      
-            <label for="message">Bericht *</label>
-            <textarea id="message" name="Bericht" rows="6" required></textarea>
-      
-            <button type="submit">Verstuur bericht</button>
+            <form action="/send-mail" method="post" class="contact-form">
+                <label for="name">Naam *</label>
+                <input type="text" id="name" name="Naam" required>
+            
+                <label for="address">Adres</label>
+                <input type="text" id="address" name="Adres">
+            
+                <label for="email">E-mailadres *</label>
+                <input type="email" id="email" name="E-mail" required>
+            
+                <label for="phone">Telefoonnummer *</label>
+                <input type="tel" id="phone" name="Telefoonnummer" required>
+            
+                <label for="message">Bericht *</label>
+                <textarea id="message" name="Bericht" rows="6" required></textarea>
+            
+                <button type="submit">Verstuur bericht</button>
           </form>
         </section>
       </main>   
