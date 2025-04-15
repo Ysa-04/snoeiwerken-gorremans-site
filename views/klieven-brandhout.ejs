@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Snoeiwerken Gorremans | Snoeien en vellen van bomen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="css/reset.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/diensten.css"/>
+  <script src="/js/diensten.js"></script>
+</head>
+<body>
+  <%- include('partials/header') %>
+  <%- include('partials/aside') %>
+
+  <main>
+    <h1>Klieven van brandhout op een snelle manier</h1>
+    <p>Heeft u een open haard, waarvan u tijdens de winter gezellig wilt genieten? Dan heeft u natuurlijk het nodige hout nodig om uw haard aan te kunnen maken. Als u bomen in uw tuin heeft staan, dan kan Snoeiwerken Gorremans het klieven van brandhout in Nijlen en omgeving voor zijn rekening nemen.</p>
+
+    <h2>Op uw gewenste lengte</h2>
+    <p>Graag komt de expert even bij u langs om de situatie tot in detail te bekijken. Hij steekt vervolgens met veel plezier de handen uit de mouwen. Het klieven van uw bomen tot brandhout gebeurt volledig op uw gewenste lengte: u zegt maar wat u precies verwacht.</p>
+    <p>Snoeiwerken Gorremans beschikt sowieso over het nodige professionele materiaal om uw hout te klieven en te verzagen op de door u gevraagde dikte en grootte. U kunt zo een mooie voorraad opstapelen voor de winter.</p>
+
+    <h2>Uw vragen zijn meer dan welkom</h2>
+    <p>Mocht u nog vragen hebben over het klieven van brandhout of het bomen snoeien door Snoeiwerken Gorremans uit Nijlen, dan is het aan te raden om snel contact op te nemen. Alles wordt u tot in detail uit de doeken gedaan.</p>
+      <section>
+        <a href="/contact"><button>Contacteer ons</button></a>
+        <a href="https://www.facebook.com/profile.php?id=100057395951596&sk=photos&locale=nl_NL" target="_blank" class="facebook-icon" aria-label="Facebook">
+          <i class="bi bi-facebook"></i>
+        </a>
+      </section>
+    <!-- Foto galerij -->
+    <section class="gallery">
+      <% for (let i = 1; i <= 3; i++) { %>
+        <img src="/assets/klieven<%= i %>.jpg" alt="Klieven <%= i %>" onclick="openModal(this.src)">
+      <% } %>
+    </section>
+    <!-- Modal voor vergrote afbeelding -->
+    <div id="imageModal" onclick="this.style.display='none'">
+      <img id="modalImg" src="" alt="Vergrote afbeelding" />
+    </div>
+  </main>
+
+  <%- include('partials/footer') %>
+
+  <script>
+    function openModal(src) {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImg');
+      modal.style.display = 'flex';
+      modalImg.src = src;
+    }
+  </script>
+</body>
+</html>
